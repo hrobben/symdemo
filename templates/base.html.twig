@@ -20,7 +20,9 @@
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="{{ path('app_default') }}">home</a>
         <a class="p-2 text-dark" href="#">Enterprise</a>
-        <a class="p-2 text-dark" href="#">Support</a>
+        {% if is_granted("ROLE_ADMIN") %}
+            <a class="p-2 text-dark" href="{{ path('admin') }}">Admin</a>
+        {% endif %}
         <a class="p-2 text-dark" href="{{ path('app_product_index') }}">Product</a>
     </nav>
 
