@@ -29,3 +29,23 @@ sudo n latest
 You may need to restart your terminal to see the updated node version.
 
 Found in David Walsh blog
+
+INstallatie van deze github repository:
+
+git clone https://github.com/hrobben/symdemo.git
+
+doe dit in je html directory bij Xampp = c:\xampp\htdocs
+
+er word dan een directory in htdocs aangemaakt met de naam "symdemo"
+
+in de dosbox ga je dan naar:  cd \xampp\htdocs\symdemo
+
+voer vervolgens uit:
+- composer install
+- yarn install en/of npm install  (om webencore te installeren, phpstorm doet dit vaak automatisch vragen aan gebruiker)
+
+Eventueel mag je ook computer upgrade gebruiken.
+
+laatste toevoeging is "Datatables"
+
+Om deze goed te laten werken, kan het zijn dat je ook "npm run build" of "yarn watch" opnieuwe moet laten runnen.

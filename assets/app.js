@@ -27,7 +27,6 @@ import 'datatables.net-scroller-bs5';
 
 $(document).ready(function () {
     // Put your jquery code here.
-    alert('hallo');
     const table = $('#lijst').DataTable({
         buttons: {
             buttons: ['copy', 'csv', 'excel', 'pdf']
