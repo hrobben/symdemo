@@ -12,6 +12,7 @@
                 <th>Description</th>
                 <th>Price</th>
                 <th>Code</th>
+                <th>Image</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -19,9 +20,10 @@
         {% for product in products %}
             <tr>
                 <td>{{ product.id }}</td>
-                <td>{{ product.description }}</td>
+                <td>{{ product.description | raw }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.code }}</td>
+                <td><img src="{{ vich_uploader_asset(product, 'imageFile') }}" alt="{{ product.description }}" height="75"></td>
                 <td>
                     <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
                     {% if is_granted('ROLE_ADMIN') %}
